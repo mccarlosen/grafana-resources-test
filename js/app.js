@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll(".fold-table tr.view").forEach(function(row) {
+  document.querySelectorAll(".fold-table tbody tr.view").forEach(function(row) {
       row.addEventListener("click", function() {
           if (this.classList.contains("open")) {
               this.classList.remove("open");
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   nextRow.classList.remove("open");
               }
           } else {
-              document.querySelectorAll(".fold-table tr.view").forEach(function(viewRow) {
+              document.querySelectorAll(".fold-table tbody tr.view").forEach(function(viewRow) {
                   viewRow.classList.remove("open");
                   let nextFold = viewRow.nextElementSibling;
                   if (nextFold && nextFold.classList.contains("fold")) {
